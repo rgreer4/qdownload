@@ -49,6 +49,7 @@ var (
 		gzip:            false,
 		endTimestamp:    false,
 		useLabels:       false,
+		ipAddress:       "127.0.0.1",
 	}
 )
 
@@ -123,6 +124,12 @@ func main() {
 			Name:        "end-timestamp, m",
 			Usage:       "use end of bar timestamps instead of start",
 			Destination: &config.endTimestamp,
+		},
+		cli.StringFlag{
+			Name:        "ip, i",
+			Value:       "127.0.0.1",
+			Usage:       "client ip address",
+			Destination: &config.ipAddress,
 		},
 	}
 
