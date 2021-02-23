@@ -29,6 +29,7 @@ type Config struct {
 	gzip            bool
 	endTimestamp    bool
 	useLabels       bool
+	ipAddress	string
 }
 
 var (
