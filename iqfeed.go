@@ -96,7 +96,7 @@ func download(symbol string, createRequest requestFactory, rowMapper rowMapper, 
 
 	// Connect to IQFeed Historical socket
 	started := millisecondsTimestamp()
-	conn, err := net.Dial("tcp", "127.0.0.1:9100")
+	conn, err := net.Dial("tcp", config.ipAddress + ":9100")
 
 	if err != nil {
 		ctx.WithError(err).Error("Could not connect to IQFeed at port 9100")
