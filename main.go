@@ -50,7 +50,7 @@ var (
 		gzip:            false,
 		endTimestamp:    false,
 		useLabels:       false,
-		ipAddress:       "127.0.0.1",
+		ipAddress:       "127.0.0.1:9100",
 	}
 )
 
@@ -128,8 +128,8 @@ func main() {
 		},
 		cli.StringFlag{
 			Name:        "ip, i",
-			Value:       "127.0.0.1",
-			Usage:       "client ip address",
+			Value:       "127.0.0.1:9100",
+			Usage:       "client ip address:port",
 			Destination: &config.ipAddress,
 		},
 	}
