@@ -329,6 +329,7 @@ func createConfig(intervalLength int, intervalType string, endTimestamp bool, ts
 		gzip:            false,
 		endTimestamp:    endTimestamp,
 		useLabels:       false,
+		ipAddress:	 "127.0.0.1",
 	}
 
 	if intervalLength > 0 && !endTimestamp {
